@@ -4,9 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebApp</title>
-</head>
-<body>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="app.css">
     
+    <title>YES WebApp</title>
+</head>
+<body id="body">
+    <header id="header">
+        <div class="smalllogo">
+            <a href="#welcome-section" class="logolink">
+                <h2>YES!</h2><h7>Junior Enterprise</h7>
+            </a>
+        </div>
+        <button class="nav-toggle">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav" id="navbar">
+            <div class="logo">
+                <a href="app.html" id="logo">
+                    <h1>YES!</h1><h6>Junior Enterprise</h6>
+                </a>
+            </div>
+
+            <ul class="nav__list" id="navlinkitems">
+                <li class="nav__item">
+                    <a href="#home-section" class="nav__link" id="home">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about-section" class="nav__link" id="about">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#skills-section" class="nav__link" id="service">Skills</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#projects-section" class="nav__link" id="work">Work</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#contacts-section" class="nav__link" id="contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <div class="container-text">
+            <h1>YES!</h1>
+            <p>Make It Simple</p>
+        </div>
+    </div>
+
+    
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            document.getElementById("navbar").style.background = "#fff";
+        }
+
+        const navToggle = document.querySelector(".nav-toggle");
+        const navLinks = document.querySelectorAll(".nav__link");
+
+        navToggle.addEventListener("click", () => {
+            document.body.classList.toggle("nav-open");
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                document.body.classList.remove("nav-open");
+            });
+        });
+
+    </script>
 </body>
 </html>
