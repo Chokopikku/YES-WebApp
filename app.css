@@ -268,7 +268,7 @@ section {
 }
 
 .container {
-    background-image: url("../images/back.png");
+    background-image: url("images/back.png");
     height: 50%;
     opacity: 0.90;
     background-position: center;
