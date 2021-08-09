@@ -270,7 +270,7 @@ section {
 .container {
     background-image: url("../images/back.png");
     height: 50%;
-    opacity: 0.75;
+    opacity: 0.90;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -286,5 +286,5 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: black;
+    color: white;
 }
