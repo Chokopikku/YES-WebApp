@@ -296,6 +296,8 @@ section {
     width: 100%;
     height: 10%;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -304,6 +306,8 @@ section {
     padding: 0.5em 0.1em 0.5em 1em;
     box-sizing: border-box;
     font-size: 30px;
+    justify-content: center;
+    align-items: center;
   }
 
 .footer-col a i {
@@ -312,4 +316,76 @@ section {
 
 .footer-col a i:hover {
     transform: scale(1.5);
+}
+
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+.test-shine {
+  width: 300px;
+  height: 500px;
+  background-color: #337bb2;
+  background-image: url('https://images.unsplash.com/photo-1578944032637-f09897c5233d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ');
+  background-repeat: no-repeat;
+  
+  
+  left: 40%;
+  margin: 25px 0 25px 25px;
+  border-radius: 5px;
+
+  overflow: hidden;
+  display: inline-block;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+}
+
+.test-shine:after {
+  content: "";
+  
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+/* Hover state - trigger effect */
+.test-shine:hover:after {
+  opacity: 1;
+  left: 130%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Active state */
+.test-shine:active:after {
+  opacity: 0;
 }
